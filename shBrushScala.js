@@ -55,7 +55,7 @@ SyntaxHighlighter.brushes.Scala = function() {
         css: 'comments' },
       /* strings */
       { regex: SyntaxHighlighter.regexLib.multiLineDoubleQuotedString,
-			  css: 'string' },
+        css: 'string' },
       /* chars */
       { regex: SyntaxHighlighter.regexLib.singleQuotedString,
         css: 'string' },
@@ -75,8 +75,8 @@ SyntaxHighlighter.brushes.Scala = function() {
       { regex: /[+-]?\b\d+(\.\d*)?([e][+-]?\d+)?([dfl])?\b/gi,
         css: 'value' },
       /* booleans */
-		  { regex: /\b(true|false)\b/g,
-			  css: 'value' },
+      { regex: /\b(true|false)\b/g,
+        css: 'value' },
       /* tuples */
       { regex: /\(|\)/g,
 			  css: 'keyword' },
