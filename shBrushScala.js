@@ -90,11 +90,11 @@ SyntaxHighlighter.brushes.Scala = function() {
      /* { regex: /\[(\b)?/g[+-],
         css: 'functions' },*/
       /* amperstands */
-		  { regex: /&amp;/g,
-			  css: 'keyword' },
+      { regex: /&amp;/g,
+        css: 'keyword' },
       /* reserved words */
-		  { regex: new BackTrackRegExp(this.getKeywords(reservedWords)),
-			  css: 'preprocessor' },
+      { regex: new BackTrackRegExp(this.getKeywords(reservedWords)),
+        css: 'preprocessor' },
       /* operators */
       { regex: new BackTrackRegExp(this.getKeywords(ops)),
         css: 'functions' },
