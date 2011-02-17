@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- http://booksites.artima.com/programming_in_scala_2ed/examples/html/ch05.html -->
+    <title>scalighter</title>
+    <style type="text/css">* {margin:0;padding:0} body {color:#fff;background:#49423D;font-family:helvetica;} #container {width:500px;margin:0 auto;}pre{border:1px solid #DEB069;padding:1em;}p{color:#947953;}</style>
+    <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+    <!--<script src="http://alexgorbatchev.com.s3.amazonaws.com/pub/sh/3.0.83/scripts/shBrushScala.js"></script>-->
+    <script src="./shBrushScala.js"></script>-
+  </head>
+  <body>
+  <div id="container">
+    <h1>scalighter</h1>
+    <p>functional scala highlighting</p>
+    <pre class="brush: scala">
+package foo.bar
+
+import lib.{A, B, C => D, E => _ }
+
+/**
+ * Some scaladocs
+ */
+trait Foo[A, B] extends D {
+  type Maze = Map[+A, B]
+  override def moo = "moooo"
+  @annotaions.tailrec def l[T](x: List[T]) = x match {
+    case head :: Nil => head
+    case head :: tail => l(tail)
+  }
+}
+
+object Bar {
+
+  val n0 = 0x00FF
+
+  val n1 = 0xcafebabe
+
+  val n2 = 035
+
+  val n3 = -10
+
+  val n4 = 0XCAFEBABEL
+
+  val n5 = 1.2345e+10
+
+  val n6 = 1.234e-10
+
+  val n7 = 1.2345F
+
+  val n8 = 3e5f
+
+  val n9 = 3e5D
+
+  val c0 = '\u0041'
+
+  val c1 = '\101'
+
+  val b0 = 1 & 2
+
+  val b1 = 1 | 2
+
+  val b2 = 1 ^ 3
+
+  val b3 = ~1
+
+  val b4 = -1 >> 31
+
+  val b5 = -1 >>> 31
+
+  val b6 = 1 << 2
+
+  implicit def a2b(a: A)  = B(a)
+
+  val Constant = Map(
+   'a -> 1,
+   'b -> 2,
+   'c -> 3
+  )
+
+  // inline comment
+  val ML = """
+    | a
+    | multiline
+    | string
+    |""".stripMargins
+
+  val SL = "a single line string"
+
+  val CS = 'a'
+}
+
+/** @param a ... */
+case class Baz(a: Seq[K]) extends A with B {
+  def zap(i: Int) = for {
+     k <- a
+  } yield {
+    (o to i) k
+  }
+}
+
+abstract class Boom[J[_]] extends Foo[String <% J, Int] {
+  def cond: Boolean = try {
+    1 * 2 == 3 && 2 * 4 == 6 || 2 / 4 == 2
+  } catch { case e @ Exception => true
+
+  def apply[A <: AnyRef](xs: A*): Array[A] = {
+    val array = new Array[A](xs.length)
+    var i = 0
+    for (x <- xs.elements) { array(i) = x; i += 1 }
+    array
+  }
+
+  def m(x: t forSome {type t <: A}) = x
+
+  def foreva = while(cond) println("4eva")
+
+  def goodEnough[T](t: T): Boolean
+
+  def `package`[T](x: T) =
+   if(goodEnough(x))
+   else {
+     `package`(x)
+   }
+}
+    </pre>
+  </div>
+    <script type="text/javascript">
+      SyntaxHighlighter.defaults['gutter'] = false;
+      SyntaxHighlighter.defaults['smart-tabs'] = false;
+      SyntaxHighlighter.defaults['toolbar'] = false;
+      SyntaxHighlighter.defaults['tab-size'] = 2;
+      SyntaxHighlighter.defaults['quick-code'] = false;
+      SyntaxHighlighter.all();
+    </script>
+  </body>
+</html>
